@@ -32,9 +32,9 @@ body{
 
 }
 
-#menu{
+.menu{
     margin-right: 15px;
-    color: #b0b1b1cc;
+    color: #bcc6c6cc;
     font-size: 14px;
     text-decoration: none;
     font-weight: 500;
@@ -50,7 +50,7 @@ body{
 
 #board-main-column{
     display: grid;
-    grid-template-rows: 10% repeat(15,6%);
+    grid-template-rows: 10% repeat(15, 1fr);
     margin: 0.15px;
 }
 
@@ -82,7 +82,7 @@ body{
 
 .player-column{
     display: grid;
-    grid-template-rows: 10% repeat(15,6%);
+    grid-template-rows: 10% repeat(15, 1fr);
     margin: 0.15px;
 
 }
@@ -112,11 +112,48 @@ body{
 }
 
 #dice-board{
+    display: flex;
+    flex-direction: column;
     margin: 10px 20%;
-    height: 15%;
+    height: auto;
     background-color: #2e353b;
     border-radius: 3px;
+    flex-wrap: wrap;
 }
+
+.player-column.active {
+    box-shadow: 0 0 10px #86c232;
+  }
+
+.dice-container{
+    display: flex;
+    justify-content: space-between;
+    padding : 0% 4%;
+    align-items: center;
+    margin : 1% 0%;
+}
+
+.dice {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  #roll-button {
+    background: #86c232;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin : 2% 10%;
+    
+  }
 
 
 
